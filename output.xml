@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170424 20:01:18.309" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
+<suite source="/home/filipe/workspace/QA Ninja Conf 2Ed" id="s1" name="QA Ninja Conf 2Ed">
+<suite source="/home/filipe/workspace/QA Ninja Conf 2Ed/TestCases" id="s1-s1" name="TestCases">
+<suite source="/home/filipe/workspace/QA Ninja Conf 2Ed/TestCases/LoginTests.robot" id="s1-s1-s1" name="LoginTests">
+<test id="s1-s1-s1-t1" name="Validar Login com Sucesso">
+<kw name="Abrir Página Principal" library="LoginPage">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170424 20:01:18.552" level="INFO">Opening browser 'chrome' to base url 'http://ninjainvoices.herokuapp.com'</msg>
+<status status="PASS" endtime="20170424 20:01:23.789" starttime="20170424 20:01:18.551"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170424 20:01:23.966" starttime="20170424 20:01:23.791"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${BOTAO_LOGIN}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:01:24.024" starttime="20170424 20:01:23.967"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:01:24.026" starttime="20170424 20:01:18.550"></status>
+</kw>
+<kw name="Clicar no botão Login" library="LoginPage">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${BOTAO_LOGIN}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:01:24.049" starttime="20170424 20:01:24.029"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BOTAO_LOGIN}</arg>
+</arguments>
+<msg timestamp="20170424 20:01:24.051" level="INFO">Clicking element 'login'.</msg>
+<status status="PASS" endtime="20170424 20:01:24.182" starttime="20170424 20:01:24.050"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:01:24.182" starttime="20170424 20:01:24.027"></status>
+</kw>
+<kw name="Inserir Email" library="LoginPage">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${CAMPO_EMAIL}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:01:24.320" starttime="20170424 20:01:24.185"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${CAMPO_EMAIL}</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20170424 20:01:24.322" level="INFO">Typing text 'testeteste@teste.com' into text field 'email'</msg>
+<status status="PASS" endtime="20170424 20:01:24.605" starttime="20170424 20:01:24.320"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:01:24.606" starttime="20170424 20:01:24.184"></status>
+</kw>
+<kw name="Inserir Senha" library="LoginPage">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${CAMPO_SENHA}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:01:24.663" starttime="20170424 20:01:24.608"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${SENHA}</arg>
+</arguments>
+<msg timestamp="20170424 20:01:24.665" level="INFO">Typing password into text field 'password'</msg>
+<status status="PASS" endtime="20170424 20:01:24.863" starttime="20170424 20:01:24.663"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:01:24.863" starttime="20170424 20:01:24.607"></status>
+</kw>
+<kw name="Submeter Formulário" library="LoginPage">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${FORM_LOGIN_SENHA}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:01:24.906" starttime="20170424 20:01:24.865"></status>
+</kw>
+<kw name="Submit Form" library="Selenium2Library">
+<doc>Submits a form identified by `locator`.</doc>
+<arguments>
+<arg>${FORM_LOGIN_SENHA}</arg>
+</arguments>
+<msg timestamp="20170424 20:01:24.907" level="INFO">Submitting form 'login_form'.</msg>
+<status status="PASS" endtime="20170424 20:01:24.979" starttime="20170424 20:01:24.906"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:01:24.983" starttime="20170424 20:01:24.864"></status>
+</kw>
+<kw name="Validar Mensagem de Boas Vindas" library="LoginPage">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Bem Vindo ${USERNAME}!</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:01:26.210" starttime="20170424 20:01:24.986"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:01:26.211" starttime="20170424 20:01:24.985"></status>
+</kw>
+<kw name="Deslogar" library="LoginPage">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${URL_LOGOUT}</arg>
+</arguments>
+<msg timestamp="20170424 20:01:26.215" level="INFO">Opening url 'http://ninjainvoices.herokuapp.com/logout'</msg>
+<status status="PASS" endtime="20170424 20:01:27.017" starttime="20170424 20:01:26.213"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:01:27.018" starttime="20170424 20:01:26.212"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170424 20:01:27.079" starttime="20170424 20:01:27.019"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:01:27.080" critical="yes" starttime="20170424 20:01:18.548"></status>
+</test>
+<test id="s1-s1-s1-t2" name="Validar Login sem Sucesso">
+<kw name="Given um usuário na página de login" library="LoginPage">
+<kw name="Abrir Página Principal" library="LoginPage">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170424 20:01:27.087" level="INFO">Opening browser 'chrome' to base url 'http://ninjainvoices.herokuapp.com'</msg>
+<status status="PASS" endtime="20170424 20:01:33.352" starttime="20170424 20:01:27.086"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170424 20:01:33.519" starttime="20170424 20:01:33.354"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${BOTAO_LOGIN}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:01:33.579" starttime="20170424 20:01:33.520"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:01:33.581" starttime="20170424 20:01:27.085"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${URL_LOGIN}</arg>
+</arguments>
+<msg timestamp="20170424 20:01:33.583" level="INFO">Opening url 'http://ninjainvoices.herokuapp.com/login'</msg>
+<status status="PASS" endtime="20170424 20:01:34.462" starttime="20170424 20:01:33.582"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:01:34.463" starttime="20170424 20:01:27.083"></status>
+</kw>
+<kw name="When usuário insere um email válido, uma senha errada e submete o formulário" library="LoginPage">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Faça seu login</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:01:34.500" starttime="20170424 20:01:34.465"></status>
+</kw>
+<kw name="Inserir Email" library="LoginPage">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${CAMPO_EMAIL}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:01:34.553" starttime="20170424 20:01:34.503"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${CAMPO_EMAIL}</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20170424 20:01:34.556" level="INFO">Typing text 'testeteste@teste.com' into text field 'email'</msg>
+<status status="PASS" endtime="20170424 20:01:34.882" starttime="20170424 20:01:34.554"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:01:34.883" starttime="20170424 20:01:34.501"></status>
+</kw>
+<kw name="Inserir Senha Inválida" library="LoginPage">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${CAMPO_SENHA}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:01:34.938" starttime="20170424 20:01:34.885"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${CAMPO_SENHA}</arg>
+<arg>1233432</arg>
+</arguments>
+<msg timestamp="20170424 20:01:34.939" level="INFO">Typing password into text field 'password'</msg>
+<status status="PASS" endtime="20170424 20:01:35.164" starttime="20170424 20:01:34.938"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:01:35.165" starttime="20170424 20:01:34.883"></status>
+</kw>
+<kw name="Submeter Formulário" library="LoginPage">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${FORM_LOGIN_SENHA}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:01:35.203" starttime="20170424 20:01:35.167"></status>
+</kw>
+<kw name="Submit Form" library="Selenium2Library">
+<doc>Submits a form identified by `locator`.</doc>
+<arguments>
+<arg>${FORM_LOGIN_SENHA}</arg>
+</arguments>
+<msg timestamp="20170424 20:01:35.205" level="INFO">Submitting form 'login_form'.</msg>
+<status status="PASS" endtime="20170424 20:01:35.284" starttime="20170424 20:01:35.204"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:01:35.285" starttime="20170424 20:01:35.166"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:01:35.286" starttime="20170424 20:01:34.464"></status>
+</kw>
+<kw name="Then mensagem de Erro deve ser exibida" library="LoginPage">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Incorrect password [403]</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:01:36.622" starttime="20170424 20:01:35.289"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:01:36.623" starttime="20170424 20:01:35.287"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170424 20:01:36.689" starttime="20170424 20:01:36.624"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:01:36.690" critical="yes" starttime="20170424 20:01:27.082"></status>
+</test>
+<test id="s1-s1-s1-t3" name="Validar Login sem Sucesso com Diversas entradas">
+<kw name="Inserir Login Inválido" library="LoginPage">
+<arguments>
+<arg>email@email.com</arg>
+<arg>${SENHA}</arg>
+</arguments>
+<kw name="Abrir Página Principal" library="LoginPage">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170424 20:01:36.701" level="INFO">Opening browser 'chrome' to base url 'http://ninjainvoices.herokuapp.com'</msg>
+<status status="PASS" endtime="20170424 20:01:44.812" starttime="20170424 20:01:36.699"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170424 20:01:44.991" starttime="20170424 20:01:44.813"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${BOTAO_LOGIN}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:01:45.046" starttime="20170424 20:01:44.992"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:01:45.047" starttime="20170424 20:01:36.698"></status>
+</kw>
+<kw name="Clicar no botão Login" library="LoginPage">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${BOTAO_LOGIN}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:01:45.073" starttime="20170424 20:01:45.049"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BOTAO_LOGIN}</arg>
+</arguments>
+<msg timestamp="20170424 20:01:45.074" level="INFO">Clicking element 'login'.</msg>
+<status status="PASS" endtime="20170424 20:01:45.207" starttime="20170424 20:01:45.074"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:01:45.208" starttime="20170424 20:01:45.048"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${CAMPO_EMAIL}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:01:45.338" starttime="20170424 20:01:45.209"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${CAMPO_EMAIL}</arg>
+<arg>${argumento_email}</arg>
+</arguments>
+<msg timestamp="20170424 20:01:45.340" level="INFO">Typing text 'email@email.com' into text field 'email'</msg>
+<status status="PASS" endtime="20170424 20:01:45.576" starttime="20170424 20:01:45.339"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${CAMPO_SENHA}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:01:45.624" starttime="20170424 20:01:45.577"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${argumento_password}</arg>
+</arguments>
+<msg timestamp="20170424 20:01:45.626" level="INFO">Typing password into text field 'password'</msg>
+<status status="PASS" endtime="20170424 20:01:45.826" starttime="20170424 20:01:45.625"></status>
+</kw>
+<kw name="Submeter Formulário" library="LoginPage">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${FORM_LOGIN_SENHA}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:01:45.865" starttime="20170424 20:01:45.828"></status>
+</kw>
+<kw name="Submit Form" library="Selenium2Library">
+<doc>Submits a form identified by `locator`.</doc>
+<arguments>
+<arg>${FORM_LOGIN_SENHA}</arg>
+</arguments>
+<msg timestamp="20170424 20:01:45.867" level="INFO">Submitting form 'login_form'.</msg>
+<status status="PASS" endtime="20170424 20:01:45.940" starttime="20170424 20:01:45.866"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:01:45.942" starttime="20170424 20:01:45.827"></status>
+</kw>
+<kw name="Page Should Not Contain" library="Selenium2Library">
+<doc>Verifies the current page does not contain `text`.</doc>
+<arguments>
+<arg>Bem Vindo</arg>
+</arguments>
+<msg timestamp="20170424 20:01:46.040" level="INFO">Current page does not contain text 'Bem Vindo'.</msg>
+<status status="PASS" endtime="20170424 20:01:46.041" starttime="20170424 20:01:45.943"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170424 20:01:46.101" starttime="20170424 20:01:46.042"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:01:46.101" starttime="20170424 20:01:36.697"></status>
+</kw>
+<kw name="Inserir Login Inválido" library="LoginPage">
+<arguments>
+<arg>${EMAIL}</arg>
+<arg>123566</arg>
+</arguments>
+<kw name="Abrir Página Principal" library="LoginPage">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170424 20:01:46.105" level="INFO">Opening browser 'chrome' to base url 'http://ninjainvoices.herokuapp.com'</msg>
+<status status="PASS" endtime="20170424 20:01:52.915" starttime="20170424 20:01:46.104"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170424 20:01:53.097" starttime="20170424 20:01:52.916"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${BOTAO_LOGIN}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:01:53.147" starttime="20170424 20:01:53.097"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:01:53.148" starttime="20170424 20:01:46.103"></status>
+</kw>
+<kw name="Clicar no botão Login" library="LoginPage">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${BOTAO_LOGIN}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:01:53.169" starttime="20170424 20:01:53.150"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BOTAO_LOGIN}</arg>
+</arguments>
+<msg timestamp="20170424 20:01:53.170" level="INFO">Clicking element 'login'.</msg>
+<status status="PASS" endtime="20170424 20:01:53.307" starttime="20170424 20:01:53.170"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:01:53.308" starttime="20170424 20:01:53.149"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${CAMPO_EMAIL}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:01:53.443" starttime="20170424 20:01:53.309"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${CAMPO_EMAIL}</arg>
+<arg>${argumento_email}</arg>
+</arguments>
+<msg timestamp="20170424 20:01:53.445" level="INFO">Typing text 'testeteste@teste.com' into text field 'email'</msg>
+<status status="PASS" endtime="20170424 20:01:53.718" starttime="20170424 20:01:53.444"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${CAMPO_SENHA}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:01:53.775" starttime="20170424 20:01:53.719"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${argumento_password}</arg>
+</arguments>
+<msg timestamp="20170424 20:01:53.777" level="INFO">Typing password into text field 'password'</msg>
+<status status="PASS" endtime="20170424 20:01:53.956" starttime="20170424 20:01:53.776"></status>
+</kw>
+<kw name="Submeter Formulário" library="LoginPage">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${FORM_LOGIN_SENHA}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:01:54.005" starttime="20170424 20:01:53.959"></status>
+</kw>
+<kw name="Submit Form" library="Selenium2Library">
+<doc>Submits a form identified by `locator`.</doc>
+<arguments>
+<arg>${FORM_LOGIN_SENHA}</arg>
+</arguments>
+<msg timestamp="20170424 20:01:54.007" level="INFO">Submitting form 'login_form'.</msg>
+<status status="PASS" endtime="20170424 20:01:54.086" starttime="20170424 20:01:54.006"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:01:54.086" starttime="20170424 20:01:53.957"></status>
+</kw>
+<kw name="Page Should Not Contain" library="Selenium2Library">
+<doc>Verifies the current page does not contain `text`.</doc>
+<arguments>
+<arg>Bem Vindo</arg>
+</arguments>
+<msg timestamp="20170424 20:01:54.171" level="INFO">Current page does not contain text 'Bem Vindo'.</msg>
+<status status="PASS" endtime="20170424 20:01:54.171" starttime="20170424 20:01:54.087"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170424 20:01:54.236" starttime="20170424 20:01:54.172"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:01:54.238" starttime="20170424 20:01:46.102"></status>
+</kw>
+<kw name="Inserir Login Inválido" library="LoginPage">
+<arguments>
+<arg>${EMAIL}</arg>
+<arg>${EM_BRANCO}</arg>
+</arguments>
+<kw name="Abrir Página Principal" library="LoginPage">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170424 20:01:54.244" level="INFO">Opening browser 'chrome' to base url 'http://ninjainvoices.herokuapp.com'</msg>
+<status status="PASS" endtime="20170424 20:02:01.423" starttime="20170424 20:01:54.243"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170424 20:02:01.606" starttime="20170424 20:02:01.424"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${BOTAO_LOGIN}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:02:01.659" starttime="20170424 20:02:01.607"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:02:01.661" starttime="20170424 20:01:54.242"></status>
+</kw>
+<kw name="Clicar no botão Login" library="LoginPage">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${BOTAO_LOGIN}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:02:01.691" starttime="20170424 20:02:01.664"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BOTAO_LOGIN}</arg>
+</arguments>
+<msg timestamp="20170424 20:02:01.693" level="INFO">Clicking element 'login'.</msg>
+<status status="PASS" endtime="20170424 20:02:01.813" starttime="20170424 20:02:01.692"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:02:01.814" starttime="20170424 20:02:01.662"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${CAMPO_EMAIL}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:02:01.945" starttime="20170424 20:02:01.815"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${CAMPO_EMAIL}</arg>
+<arg>${argumento_email}</arg>
+</arguments>
+<msg timestamp="20170424 20:02:01.948" level="INFO">Typing text 'testeteste@teste.com' into text field 'email'</msg>
+<status status="PASS" endtime="20170424 20:02:02.244" starttime="20170424 20:02:01.946"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${CAMPO_SENHA}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:02:02.298" starttime="20170424 20:02:02.246"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${argumento_password}</arg>
+</arguments>
+<msg timestamp="20170424 20:02:02.300" level="INFO">Typing password into text field 'password'</msg>
+<status status="PASS" endtime="20170424 20:02:02.441" starttime="20170424 20:02:02.299"></status>
+</kw>
+<kw name="Submeter Formulário" library="LoginPage">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${FORM_LOGIN_SENHA}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:02:02.478" starttime="20170424 20:02:02.443"></status>
+</kw>
+<kw name="Submit Form" library="Selenium2Library">
+<doc>Submits a form identified by `locator`.</doc>
+<arguments>
+<arg>${FORM_LOGIN_SENHA}</arg>
+</arguments>
+<msg timestamp="20170424 20:02:02.480" level="INFO">Submitting form 'login_form'.</msg>
+<status status="PASS" endtime="20170424 20:02:02.561" starttime="20170424 20:02:02.479"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:02:02.562" starttime="20170424 20:02:02.442"></status>
+</kw>
+<kw name="Page Should Not Contain" library="Selenium2Library">
+<doc>Verifies the current page does not contain `text`.</doc>
+<arguments>
+<arg>Bem Vindo</arg>
+</arguments>
+<msg timestamp="20170424 20:02:02.654" level="INFO">Current page does not contain text 'Bem Vindo'.</msg>
+<status status="PASS" endtime="20170424 20:02:02.654" starttime="20170424 20:02:02.563"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170424 20:02:02.716" starttime="20170424 20:02:02.655"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:02:02.717" starttime="20170424 20:01:54.240"></status>
+</kw>
+<kw name="Inserir Login Inválido" library="LoginPage">
+<arguments>
+<arg>${EM_BRANCO}</arg>
+<arg>${EM_BRANCO}</arg>
+</arguments>
+<kw name="Abrir Página Principal" library="LoginPage">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170424 20:02:02.721" level="INFO">Opening browser 'chrome' to base url 'http://ninjainvoices.herokuapp.com'</msg>
+<status status="PASS" endtime="20170424 20:02:09.840" starttime="20170424 20:02:02.720"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170424 20:02:10.012" starttime="20170424 20:02:09.842"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${BOTAO_LOGIN}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:02:10.070" starttime="20170424 20:02:10.013"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:02:10.071" starttime="20170424 20:02:02.719"></status>
+</kw>
+<kw name="Clicar no botão Login" library="LoginPage">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${BOTAO_LOGIN}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:02:10.092" starttime="20170424 20:02:10.073"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${BOTAO_LOGIN}</arg>
+</arguments>
+<msg timestamp="20170424 20:02:10.094" level="INFO">Clicking element 'login'.</msg>
+<status status="PASS" endtime="20170424 20:02:10.228" starttime="20170424 20:02:10.093"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:02:10.229" starttime="20170424 20:02:10.072"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${CAMPO_EMAIL}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:02:10.359" starttime="20170424 20:02:10.230"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${CAMPO_EMAIL}</arg>
+<arg>${argumento_email}</arg>
+</arguments>
+<msg timestamp="20170424 20:02:10.361" level="INFO">Typing text '' into text field 'email'</msg>
+<status status="PASS" endtime="20170424 20:02:10.494" starttime="20170424 20:02:10.360"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${CAMPO_SENHA}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:02:10.546" starttime="20170424 20:02:10.495"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${argumento_password}</arg>
+</arguments>
+<msg timestamp="20170424 20:02:10.548" level="INFO">Typing password into text field 'password'</msg>
+<status status="PASS" endtime="20170424 20:02:10.677" starttime="20170424 20:02:10.547"></status>
+</kw>
+<kw name="Submeter Formulário" library="LoginPage">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${FORM_LOGIN_SENHA}</arg>
+</arguments>
+<status status="PASS" endtime="20170424 20:02:10.717" starttime="20170424 20:02:10.679"></status>
+</kw>
+<kw name="Submit Form" library="Selenium2Library">
+<doc>Submits a form identified by `locator`.</doc>
+<arguments>
+<arg>${FORM_LOGIN_SENHA}</arg>
+</arguments>
+<msg timestamp="20170424 20:02:10.721" level="INFO">Submitting form 'login_form'.</msg>
+<status status="PASS" endtime="20170424 20:02:10.806" starttime="20170424 20:02:10.719"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:02:10.806" starttime="20170424 20:02:10.678"></status>
+</kw>
+<kw name="Page Should Not Contain" library="Selenium2Library">
+<doc>Verifies the current page does not contain `text`.</doc>
+<arguments>
+<arg>Bem Vindo</arg>
+</arguments>
+<msg timestamp="20170424 20:02:10.893" level="INFO">Current page does not contain text 'Bem Vindo'.</msg>
+<status status="PASS" endtime="20170424 20:02:10.893" starttime="20170424 20:02:10.807"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170424 20:02:10.954" starttime="20170424 20:02:10.894"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:02:10.960" starttime="20170424 20:02:02.718"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170424 20:02:10.962" starttime="20170424 20:02:10.961"></status>
+</kw>
+<status status="PASS" endtime="20170424 20:02:10.962" critical="yes" starttime="20170424 20:01:36.693"></status>
+</test>
+<status status="PASS" endtime="20170424 20:02:10.965" starttime="20170424 20:01:18.417"></status>
+</suite>
+<status status="PASS" endtime="20170424 20:02:10.972" starttime="20170424 20:01:18.413"></status>
+</suite>
+<status status="PASS" endtime="20170424 20:02:10.979" starttime="20170424 20:01:18.368"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="QA Ninja Conf 2Ed" pass="3">QA Ninja Conf 2Ed</stat>
+<stat fail="0" id="s1-s1" name="TestCases" pass="3">QA Ninja Conf 2Ed.TestCases</stat>
+<stat fail="0" id="s1-s1-s1" name="LoginTests" pass="3">QA Ninja Conf 2Ed.TestCases.LoginTests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
