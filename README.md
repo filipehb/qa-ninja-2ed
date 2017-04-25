@@ -32,7 +32,7 @@ $ pip install robotframework-selenium2library
 
 * Instale direto pelo Eclipse no menu **Help** > **Eclipse Marketplace**
 
-## Linux
+## Linux (Debian Dist)
 
 ### Robot Framework
 
@@ -45,7 +45,7 @@ $ sudo apt-get install python2.7
 * Baixar o Pip
 
 ```sh
-$ sudo apt-get install python2.7
+$ sudo apt-get install python-pip
 ```
 
 * Confirmar versões do python e do pip
