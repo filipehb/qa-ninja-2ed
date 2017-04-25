@@ -6,7 +6,7 @@
 
 * Baixar MSI do [Python 2](https://www.python.org/downloads/) 
 * Durante o Setup é importante deixar marcada a opção de instalação do pip e da configuração da [variável de ambiente](https://www.howtogeek.com/wp-content/uploads/2014/10/Python-8.jpg.pagespeed.ce.-GDwMsprYt.jpg)
-* Confirme se o [pip] e [python] estão devidamente instalado com os comandos de versão 
+* Confirme se o pip e python estão devidamente instalado com os comandos de versão 
 
 ```sh
 $ python -V
@@ -28,9 +28,9 @@ $ pip install robotframework-selenium2library
 
 ### [Plugin RED Editor](https://marketplace.eclipse.org/content/red-robot-editor)
 
-** O plugin é compatível com essas versões do eclipse: Oxygen (4.7), Neon (4.6), Mars (4.5) **
+**O plugin é compatível com essas versões do eclipse: Oxygen (4.7), Neon (4.6), Mars (4.5)**
 
-* Instale direto pelo Eclipse no Menu *** Help *** > Eclipse Marketplace
+* Instale direto pelo Eclipse no Menu **Help** > Eclipse Marketplace
 
 ## Linux
 
@@ -70,6 +70,6 @@ $ pip install robotframework-selenium2library
 
 ### [Plugin RED Editor](https://marketplace.eclipse.org/content/red-robot-editor)
 
-** O plugin é compatível com essas versões do eclipse: Oxygen (4.7), Neon (4.6), Mars (4.5) **
+**O plugin é compatível com essas versões do eclipse: Oxygen (4.7), Neon (4.6), Mars (4.5)**
 
 * Instale direto pelo Eclipse no Menu *** Help *** > Eclipse Marketplace
