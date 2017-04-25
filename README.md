@@ -30,7 +30,7 @@ $ pip install robotframework-selenium2library
 
 **O plugin é compatível com essas versões do eclipse: Oxygen (4.7), Neon (4.6), Mars (4.5)**
 
-* Instale direto pelo Eclipse no Menu **Help** > Eclipse Marketplace
+* Instale direto pelo Eclipse no menu **Help** > **Eclipse Marketplace**
 
 ## Linux
 
@@ -72,4 +72,4 @@ $ pip install robotframework-selenium2library
 
 **O plugin é compatível com essas versões do eclipse: Oxygen (4.7), Neon (4.6), Mars (4.5)**
 
-* Instale direto pelo Eclipse no Menu *** Help *** > Eclipse Marketplace
+* Instale direto pelo Eclipse no menu **Help** > **Eclipse Marketplace**
